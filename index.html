@@ -86,33 +86,33 @@
 
     </main>
 
-
     <script>
-
-        let title = document.getElementById('title')
         let passCheck = document.getElementById('passCheck')
+        let title = document.getElementById('title')
+        let passConfirm = document.getElementById('passwordConfirm')
         function allowPass() {
-
+  
             if (password.type === 'password') {
                 password.type = 'text'
+                passConfirm.type = 'text'
             } else {
                 password.type = 'password'
+                passConfirm.type = 'password'
             }
         }
 
         function formFunction() {
-            let passwordCheck = document.getElementById('passwordConfirm').value
+
             let name = document.getElementById('name').value
             let form = document.getElementById('form__content')
             let password = document.getElementById("password").value;
 
-            if (password == passwordCheck && password.length > 5 && password !== '' && name.length > 1) {
+            if (password == passConfirm.value && password.length > 5 && password !== '' && name.length > 1) {
                 let cat = document.getElementById('cat')
-                title.style.cssText = '   color:rgba(68, 196, 179, 0.6); text-align:center;'
+                title.style.cssText = 'color:rgba(68, 196, 179, 0.6); text-align:center;'
                 title.textContent = 'BOAS VINDAS ' + name.toUpperCase() + '!!!'
                 form.style.display = 'none'
                 cat.style.display = 'block'
-
             }
 
             else if (password.length < 5) {
