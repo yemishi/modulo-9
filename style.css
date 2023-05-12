@@ -195,7 +195,8 @@ input[type="checkbox"]:checked {
     border-radius: 20px;
     margin: 20px 0 40px 0;
     align-self: center;
-    width: 65%;  
+    width: 75%;
+    height: 500px;
     display: none;
 }
 
