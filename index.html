@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.pinimg.com/474x/6d/a8/9c/6da89c379a76fded6845af501c90e9fb.jpg">
+    <title>Formulario</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="bubble">
+            <span style="--i:11"></span>
+            <span style="--i:17"></span>
+            <span style="--i:24"></span>
+            <span style="--i:15"></span>
+            <span style="--i:9"></span>
+            <span style="--i:3"></span>
+            <span style="--i:28"></span>
+            <span style="--i:17"></span>
+            <span style="--i:20"></span>
+            <span style="--i:6"></span>
+            <span style="--i:14"></span>
+            <span style="--i:29"></span>
+            <span style="--i:17"></span>
+            <span style="--i:9"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:12"></span>
+            <span style="--i:20"></span>
+            <span style="--i:11"></span>
+            <span style="--i:17"></span>
+            <span style="--i:24"></span>
+            <span style="--i:15"></span>
+            <span style="--i:9"></span>
+            <span style="--i:3"></span>
+            <span style="--i:28"></span>
+            <span style="--i:17"></span>
+            <span style="--i:20"></span>
+            <span style="--i:6"></span>
+            <span style="--i:14"></span>
+            <span style="--i:29"></span>
+            <span style="--i:17"></span>
+            <span style="--i:9"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:12"></span>
+            <span style="--i:20"></span>
+        </div>
+
+        <form onsubmit="return false">
+
+            <h1 id='title'>Coloque seus dados</h1>
+
+            <img id='cat' src="https://media.tenor.com/O6r43C_Pb0gAAAAC/neko-nekomimi.gif" alt="Cat girl dancing">
+
+            <div id="form__content">
+
+                <label for="name">Nome</label>
+                <input type="text" id="name" placeholder="Amável Pinto">
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="2enh@F0rTe123">
+
+                <span class="pass__check">
+                    <label for="passwordConfirm">Confirme sua senha</label>
+                    <p id="passCheck"></p>
+                </span>
+
+                <input type="password" id="passwordConfirm" placeholder="2enh@F0rTe123">
+
+                <span>
+                    <input type="checkbox" id="checkbox" onclick="allowPass()">
+                    <label for="checkbox">Mostra senha</label>
+                </span>
+
+                <button onclick="formFunction()">Entrar</button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <script>
+
+        let title = document.getElementById('title')
+        let passCheck = document.getElementById('passCheck')
+        function allowPass() {
+
+            if (password.type === 'password') {
+                password.type = 'text'
+            } else {
+                password.type = 'password'
+            }
+        }
+
+        function formFunction() {
+            let passwordCheck = document.getElementById('passwordConfirm').value
+            let name = document.getElementById('name').value
+            let form = document.getElementById('form__content')
+            let password = document.getElementById("password").value;
+
+            if (password == passwordCheck && password.length > 5 && password !== '' && name.length > 1) {
+                let cat = document.getElementById('cat')
+                title.style.cssText = '   color:rgba(68, 196, 179, 0.6); text-align:center;'
+                title.textContent = 'BOAS VINDAS ' + name.toUpperCase() + '!!!'
+                form.style.display = 'none'
+                cat.style.display = 'block'
+
+            }
+
+            else if (password.length < 5) {
+                passCheck.textContent = 'A senha tem que ter no minimo 6 linhas'
+            }
+
+            else {
+                passCheck.textContent = 'Login invalído'
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
