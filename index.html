@@ -50,13 +50,53 @@
             <span style="--i:26"></span>
             <span style="--i:12"></span>
             <span style="--i:20"></span>
+            <span style="--i:11"></span>
+            <span style="--i:17"></span>
+            <span style="--i:24"></span>
+            <span style="--i:15"></span>
+            <span style="--i:9"></span>
+            <span style="--i:3"></span>
+            <span style="--i:28"></span>
+            <span style="--i:17"></span>
+            <span style="--i:20"></span>
+            <span style="--i:6"></span>
+            <span style="--i:14"></span>
+            <span style="--i:29"></span>
+            <span style="--i:17"></span>
+            <span style="--i:9"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:12"></span>
+            <span style="--i:20"></span>
+            <span style="--i:11"></span>
+            <span style="--i:17"></span>
+            <span style="--i:24"></span>
+            <span style="--i:15"></span>
+            <span style="--i:9"></span>
+            <span style="--i:3"></span>
+            <span style="--i:28"></span>
+            <span style="--i:17"></span>
+            <span style="--i:20"></span>
+            <span style="--i:6"></span>
+            <span style="--i:14"></span>
+            <span style="--i:29"></span>
+            <span style="--i:17"></span>
+            <span style="--i:9"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:12"></span>
+            <span style="--i:20"></span>
+
+
+
+  
         </div>
 
         <form onsubmit="return false">
 
             <h1 id='title'>Coloque seus dados</h1>
 
-            <img id='cat' src="https://media.tenor.com/O6r43C_Pb0gAAAAC/neko-nekomimi.gif" alt="Cat girl dancing">
+            <p id="cat"></p>
 
             <div id="form__content">
 
@@ -91,7 +131,7 @@
         let title = document.getElementById('title')
         let passConfirm = document.getElementById('passwordConfirm')
         function allowPass() {
-  
+
             if (password.type === 'password') {
                 password.type = 'text'
                 passConfirm.type = 'text'
@@ -116,7 +156,7 @@
             }
 
             else if (password.length < 5) {
-                passCheck.textContent = 'A senha tem que ter no minimo 6 linhas'
+                passCheck.textContent = 'A senha tem que ter no minimo 6 caracteres'
             }
 
             else {

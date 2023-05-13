@@ -198,6 +198,10 @@ input[type="checkbox"]:checked {
     width: 75%;
     height: 500px;
     display: none;
+    background-image: url('https://media.tenor.com/O6r43C_Pb0gAAAAC/neko-nekomimi.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 form button {
@@ -221,4 +225,17 @@ form button:hover {
 
 form button:active {
     background: #1e25275e;
+}
+
+@media only screen and (max-width: 768px) {
+    #cat {
+        background-image: url('https://i.pinimg.com/originals/4b/34/c2/4b34c2fd473942b7fbd25c443b8ed8a2.gif');
+    }
+}
+
+@media only screen and (min-width:1750px) {
+    #cat {
+        height: 740px;
+        background-image: url('https://i.pinimg.com/originals/bc/52/ac/bc52ac9b9a742c4e255977e191461319.gif');
+    }
 }
